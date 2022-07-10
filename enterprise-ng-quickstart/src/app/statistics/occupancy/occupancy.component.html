@@ -1,0 +1,42 @@
+<!-- DataGrid -->
+<div class="row top-padding">
+  <div class="three-thirds column">
+    <div class="widget">
+      <div class="widget-header">
+        <h2 class="widget-title"> Data Grid </h2>
+      </div>
+      <div class="widget-content">
+        <div soho-datagrid
+          [columns]="getDataGridColumns()"
+          [data]="occupancies"
+          [selectable]="'single'"
+          [paging]="true"
+          [pagesize]="4"
+          [treeGrid]="true">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end DataGrid -->
+
+<!-- Chart line -->
+<div class="row top-padding">
+  <div class="three-thirds column">
+    <div class="widget">
+      <div class="widget-header">
+        <h2 class="widget-title">Line Chart </h2>
+      </div>
+      <div class="widget-content">
+        <div soho-line class="chart-container"
+          [dataset]="getLineChartData()"
+          showLegend="true"
+          [xAxis]="xAxis"
+          [yAxis]="yAxis"
+          hideDots="true"
+          type="spline">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
